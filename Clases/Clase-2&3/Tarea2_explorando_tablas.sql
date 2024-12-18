@@ -70,7 +70,7 @@ PRINT YEAR('202010' + '01')
 SELECT * FROM Gestion_detalle gd
 
 SELECT COUNT(*) [Cliente corta abruptamente llamada]FROM Gestion_detalle gd
-WHERE DetalleResultado LIKE '%cort%comunicación%' AND ResultadoTelefonoCRM LIKE '%Válido%'
+WHERE DetalleResultado LIKE '%cort%comunicaciÃ³n%' AND ResultadoTelefonoCRM LIKE '%VÃ¡lido%'
 
 SELECT COUNT(*) [Cliente corta abruptamente llamada]FROM Gestion_detalle gd
 WHERE ResultadoGestionCRM LIKE '%no%llamar%' 
