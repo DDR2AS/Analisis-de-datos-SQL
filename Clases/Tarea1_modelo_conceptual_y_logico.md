@@ -8,7 +8,7 @@
 - CLIENTE (IdCliente, nombres, apellidos, dni, email, telefono, fechaNac, genero)
 - PRODUCTO (IdProducto, Nombre, precio, stock, categoria)
 - BOLETA_VENTA (idBoleta, idCliente,codigoBoleta, nroArticulos,MontoTotal, descuento,MontoDsc#, fechaEmision, opGravada#,igv#, idEmpleado*, métodoPago)
-- DETALLE DE VENTA (idDetalleVenta, idBoleta*, idProducto*, cantidad, PrecioUnitario, PrecioParcial)
+- DETALLE_DE_VENTA (idDetalleVenta, idBoleta*, idProducto*, cantidad, PrecioUnitario, PrecioParcial)
 - TARJETA_BONUS (idTarjeta, codTarjeta, idCliente*, saldoActual, fechaUltMod, idUltTransaccion )
 - TRANSACCIONES_BONUS (idTransaccion, idTarjeta*, saldoAnterior, puntosGanados, saldoUsado, SaldoActual, fechaTransaccion, hora)
 - SEDE (idSede, RazonSocial, direccion, distrito, telefono, ruc)
@@ -48,4 +48,13 @@
      - opGravada:
      - igv:
      - métodoPago: 
-     - idEmpleado (FK):  
+     - idEmpleado (FK):
+
+4.**DETALLE_DE_VENTA**
+     - idDetalleVenta : Identificador único y secuencial.
+     - idBoleta (FK) : Identificador para filtrar el detalle.
+     - idProducto (FK): 
+     - cantidad : Integer que representa cantidad.
+     - PrecioUnitario : Sirve mantener registros temporales en caso cambie el precio.
+     - PrecioParcial : Precio unitario x Cantidad.
+ 
