@@ -7,7 +7,7 @@
 ## 🔶 Modelo Conceptual 
 - CLIENTE (IdCliente, nombres, apellidos, dni, email, telefono, fechaNac, genero)
 - PRODUCTO (IdProducto, Nombre, precio, stock, categoria)
-- BOLETA_VENTA (idBoleta, idCliente,codigoBoleta, nroArticulos,MontoTotal, descuento,MontoDsc#, fechaEmision, hora, opGravada#,igv#, idEmpleado*, métodoPago)
+- BOLETA_VENTA (idBoleta, idCliente,codigoBoleta, nroArticulos,MontoTotal, descuento,MontoDsc#, fechaEmision, opGravada#,igv#, idEmpleado*, métodoPago)
 - DETALLE DE VENTA (idDetalleVenta, idBoleta*, idProducto*, cantidad, PrecioUnitario, PrecioParcial)
 - TARJETA_BONUS (idTarjeta, codTarjeta, idCliente*, saldoActual, fechaUltMod, idUltTransaccion )
 - TRANSACCIONES_BONUS (idTransaccion, idTarjeta*, saldoAnterior, puntosGanados, saldoUsado, SaldoActual, fechaTransaccion, hora)
@@ -30,8 +30,22 @@
 2. **PRODUCTO**: 
    - **Propiedades**: 
      - IdProducto (PK): Identificador único del producto.
-     - ID_Sucursal (FK): Identificador de la sucursal a la que pertenece.
      - Nombre: Nombre del producto.
      - Precio: Precio unitario.
      - Stock: Cantidad disponible en inventario.
      - Categoría: Tipo o categoría del producto.
+    
+3. **BOLETA_VENTA**: 
+   - **Propiedades**:
+     - IdBoleta (PK): Identificador único de la boleta.
+     - IdCliente (FK): Cliente asociado a la venta.
+     - CodigoBoleta: Número generado por default.
+     - nroArticulos: Cantidad total de artículos.
+     - MontoTotal: Total en soles (S/.).
+     - Descuento: 
+     - MontoDsc:
+     - fechaEmision: 
+     - opGravada:
+     - igv:
+     - métodoPago: 
+     - idEmpleado (FK):  
